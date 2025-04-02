@@ -142,17 +142,47 @@ header .LogoHeader{padding:15px 0}
 header .LogoHeader .container{display:flex;justify-content:space-between;align-items:center}
 header .LogoHeader .Logo{display:flex;align-items:center}
 header .LogoHeader .Logo img{width:80px}
-header .LogoHeader .Link a{border: 2px solid #cca462;padding:10px 25px;font-size:14px;border-radius:50px;color:#fff;font-weight:500;letter-spacing:.5px;text-transform:uppercase;display:inline-block}
+header .LogoHeader .Link a{border: 2px solid #cca462;padding: 8px 30px;font-size:14px;border-radius:50px;color: #000000;font-weight:500;letter-spacing:.5px;text-transform: capitalize;display:inline-block;line-height: 21px;background: #cca462;}
 header .LogoHeader .Link a:hover{background-color: #cca462;color: #000000;}
+
+header .LogoHeader .Navigation{}
+header .LogoHeader .Navigation ul{}
+header .LogoHeader .Navigation ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+header .LogoHeader .Navigation ul li a{
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+header .LogoHeader .Navigation ul li a:hover{
+    color: #cca462;
+}
+
+.Fixed{animation:0.7s ease 0s normal none 1 running;position:fixed;transition:all 0.5s ease-in-out;background: #000;top:0;z-index:99}
+
+@keyframes slide-down{
+    0%{opacity:0;transform:translateY(-100%)}
+    100%{opacity:.9;transform:translateY(0)}
+} 
+
+header.Fixed .SocialHeader{ display:none; }
+header.Fixed .LogoHeader{
+    border-bottom: 1px solid #4d3307;
+}
+
 
 .SlideArea{background-image:url(../images/Slide.jpg);min-height:100vh;background-size:cover;background-attachment:fixed;display:flex;align-items:center}
 .SlideArea h1{margin:0 0 20px 0;font-size:48px;font-weight:700;line-height:56px;color:#fff;font-family:"Poppins",sans-serif}
 .SlideArea h1 span{color:#cca462;display:block}
 .SlideArea p{color:#eee;font-size:20px;margin:0 0 20px 0}
-.SlideArea a{border:2px solid #4d3307;padding:10px 35px;font-size:14px;border-radius:50px;background-color:#fff0;color:#fff;font-weight:500;letter-spacing:1px;display:inline-block}
+.SlideArea a{padding: 12px 35px;font-size: 15px;border-radius: 4px;background-color: #c52424;color:#fff;font-weight:500;letter-spacing:1px;display:inline-block;line-height: 20px;}
 .SlideArea a:hover{background-color:#cca462;color:#000}
 
-.SpecialsArea{background-image:url(../images/Specials.jpg);background-size:cover;background-attachment:fixed;padding:50px 0}
+.SpecialsArea{background-image:url(../images/Specials.jpg);background-size:cover;background-attachment:fixed;padding: 100px 0;}
 .SpecialsArea:before{content:'';background-color:rgb(0 0 0 / .8);position:absolute;top:0;right:0;left:0;bottom:0}
 .SpecialsArea h2{font-size:36px;font-weight:700;font-family:"Playfair Display",serif;color:#fff;text-align:center;margin:0 0 40px 0;position:relative}
 .SpecialsArea .SpecialsBox{position:relative;overflow:hidden}
@@ -180,7 +210,7 @@ header .LogoHeader .Link a:hover{background-color: #cca462;color: #000000;}
 .BurnsArea .BurnsBox figcaption h4 span{background:#060606;position:relative;z-index:3;padding:0 10px;font-weight:600;color:#ecebe9;float:right}
 .BurnsArea .BurnsBox figcaption p{font-style:italic;font-size:14px;font-family:"Poppins",sans-serif;color:rgb(255 255 255 / .5)}
 
-.ServiceArea{background-image:url(../images/Service.jpg);background-size:cover;background-attachment:fixed;padding:70px 0}
+.ServiceArea{background-image:url(../images/Service.jpg);background-size:cover;background-attachment:fixed;padding: 100px 0;}
 .ServiceArea:before{content:'';background-color:rgb(0 0 0 / 90%);position:absolute;top:0;right:0;left:0;bottom:0}
 .ServiceArea h2{font-size:36px;font-weight:700;font-family:"Playfair Display",serif;color:#fff;text-align:center;margin:0 0 40px 0;position:relative}
 .ServiceArea .ServiceRight{color:#fff}
@@ -192,7 +222,7 @@ header .LogoHeader .Link a:hover{background-color: #cca462;color: #000000;}
 .ServiceArea .carousel-indicators li{margin:0 5px;border:none;width:12px;height:12px;background-color:#ddd;opacity:1;border-radius:50px}
 .ServiceArea .carousel-indicators li.active{background:#febb5c}
 
-.TableArea{background-image:url(../images/Table.jpg);background-size:cover;background-attachment:fixed;padding:50px 0}
+.TableArea{background-image:url(../images/Table.jpg);background-size:cover;background-attachment:fixed;padding:50px 0;}
 .TableArea:before{content:'';background-color:rgb(0 0 0 / .8);position:absolute;top:0;right:0;left:0;bottom:0}
 .TableArea h2{position:relative;margin:0 0 30px 0;font-size:36px;font-weight:700;font-family:"Playfair Display",serif;color:#fff}
 .TableArea .form-group{margin:0 0 30px 0}
@@ -210,7 +240,7 @@ header .LogoHeader .Link a:hover{background-color: #cca462;color: #000000;}
 .ClientArea .owl-dots .owl-dot{width:12px;height:12px;background-color:rgb(255 255 255 / .4);opacity:1;margin:0 5px;border-radius:30px}
 .ClientArea .owl-dots .owl-dot.active{background:#fff}
 
-.RestaurantArea{padding:60px 0;background-color:#0c0b09}
+.RestaurantArea{padding: 100px 0;background-color:#0c0b09}
 .RestaurantArea h2{margin:0 0 40px 0;font-size:36px;font-weight:700;font-family:"Playfair Display",serif;color:#fff;text-align:center}
 .RestaurantArea .RestaurantBox{margin:0 0 30px 0}
 .RestaurantArea .RestaurantBox a{display:block;overflow:hidden}
@@ -229,4 +259,3 @@ footer .Footer .Foots ul li a:hover{color:#cda45e}
 footer .Copyright{background:#0c0b09;padding:20px 0;text-align:center}
 footer .Copyright p{color:#fff;font-size:13px;letter-spacing:.4px}
 
- 
