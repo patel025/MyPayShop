@@ -1,8 +1,49 @@
-@media screen and  (min-width: 1700px) {
+@media all and (min-width: 992px) {
+    .container{ max-width:1320px }
+}
+
+@media all and (max-width: 992px) {
+    
+    header .LogoHeader .Navigation ul{ position: fixed; top: 0; left: 0; width: 320px; padding: 30px; box-sizing: border-box; background-color: #000; height: 100vh; transition: 0.5s all ease-in-out; transform: translate(-100%, 0px); } 
+    header .LogoHeader .Navigation ul li{margin: 0 0 25px 0;display: block;}
+    header .LogoHeader .Navigation ul.Show{ transform: translate(-0%, 0px); }
+    header .LogoHeader .Navigation ul li a{ font-size:25px }
+    header .LogoHeader .Link{ display:none; }
+
+    .MenuBox{ display:block; }
+    .CloseMenu{ display:block; }
+
+    .SlideArea{ background-position:center; text-align:center; } 
+
+    .SpecialsArea .col-sm-4{ flex: 0 0 50%; max-width: 50%;}
+    .SpecialsArea .SpecialsBox{ margin-bottom:30px }
+
+    .BurnsArea .col-sm-4{ flex: 0 0 100%; max-width: 100%;}
+
+    .ServiceArea .col-sm-6{ flex: 0 0 100%; max-width: 100%;}
+    .ServiceArea .ServiceRight{ margin-top:30px }
+
+    .RestaurantArea .col-sm-4{ flex: 0 0 50%; max-width: 50%;}
+
+    footer .Footer { padding:50px 0 30px 0 }
+    footer .Footer .Foots{ margin-bottom:30px }
 
 
-    .DashboardItem .col-sm-6{-ms-flex: 0 0 33.333333%; flex: 0 0 33.333333%; max-width: 33.333333%;}
+}
 
-}   
- 
- 
+@media all and (max-width: 600px) {
+
+    header .SocialHeader .container{ display:block; }
+    header .SocialHeader div{ text-align:center; }
+    header .SocialHeader p{ max-width:0 10px }
+    header .SocialHeader ul{ text-align:center; margin-top:10px }
+
+    .SpecialsArea { padding:100px 0 50px }
+    .SpecialsArea .col-sm-4{ flex: 0 0 100%; max-width: 100%;}
+
+    .ServiceArea { padding:80px 0 50px }
+
+    .RestaurantArea{ padding:80px 0 50px }
+    .RestaurantArea .col-sm-4{ flex: 0 0 100%; max-width: 100%;}
+
+}

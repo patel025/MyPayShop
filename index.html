@@ -17,20 +17,16 @@
     <header>
         <div class="SocialHeader">
             <div class="container">
-                <div class="row">
-                    <div class="col-sm-6"> 
-                        <p><i class="fa fa-phone" aria-hidden="true"></i> + 91 999999999 </p>
-                        <p><i class="fa fa-clock-o" aria-hidden="true"></i> Monday-Friday: 10AM - 20PM</p> 
-                    </div>
-                    <div class="col-sm-6"> 
-                        <ul>
-                            <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                        </ul> 
-                    </div>
-                </div> 
+                <div>
+                    <p><i class="fa fa-phone" aria-hidden="true"></i> + 91 999999999 </p>
+                    <p><i class="fa fa-clock-o" aria-hidden="true"></i> Monday-Friday: 10AM - 20PM</p>
+                </div>
+                <ul>
+                    <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                </ul>
             </div>
         </div>
         <div class="LogoHeader">
@@ -39,7 +35,16 @@
                     <img src="https://food.websiterk.shop/assets/img/logo.png"> 
                 </div>
                 <div class="Navigation">
+                    <button class="MenuBox">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                     <ul>
+                        <button class="CloseMenu">
+                            <span></span>
+                            <span></span>
+                        </button>
                         <li><a href="#Home">Home</a></li>
                         <li><a href="#Specials">Specials</a></li>
                         <li><a href="#About">About us</a></li>
@@ -648,7 +653,7 @@
                 loop: true,
                 responsive: {
                     0: { items: 1 },
-                    600: { items: 2 },
+                    600: { items: 1 },
                     1000: { items: 3 },
                 },
             });
@@ -674,29 +679,43 @@
         });
     </script>
 
-        <script type="text/javascript">
+    <script type="text/javascript">
         $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-    if (scroll >= 50) {
-      $("header").addClass("Fixed");
-    } else {
-      $("header").removeClass("Fixed");
-    }
-});
+            var scroll = $(window).scrollTop();
+            if (scroll >= 50) {
+              $("header").addClass("Fixed");
+            } else {
+              $("header").removeClass("Fixed");
+            }
+        });
     </script>
 
     <script type="text/javascript">
-    $(document).ready(function() {
-         $(window).scroll(function(){
-            let newUrlIS =  window.location.origin + window.location.pathname
-            history.pushState({}, null, newUrlIS);
+        $(document).ready(function() {
+             $(window).scroll(function(){
+                let newUrlIS =  window.location.origin + window.location.pathname
+                history.pushState({}, null, newUrlIS);
+            });
+            $(".Navigation ul li a").click(function(){
+                let newUrlIS =  window.location.origin + window.location.pathname 
+                history.pushState({}, null, newUrlIS);
+            });
         });
-        $(".Navigation ul li a").click(function(){
-            let newUrlIS =  window.location.origin + window.location.pathname 
-            history.pushState({}, null, newUrlIS);
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".MenuBox").click(function(){
+                $(".Navigation ul").toggleClass("Show");
+            });
+            $(".CloseMenu").click(function(){
+                $(".Navigation ul").toggleClass("Show");
+            });
+            $(".Navigation ul li a").click(function(){
+                $(".Navigation ul").toggleClass("Show");
+            });
         });
-    });
-</script>
+    </script>
   
 </body>
 </html>
